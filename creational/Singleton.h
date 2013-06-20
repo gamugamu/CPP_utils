@@ -6,9 +6,6 @@
 //  Copyright (c) 2013 Abadie, Loïc. All rights reserved.
 //
 
-#ifndef OneMind_Singleton_h
-#define OneMind_Singleton_h
-
 #ifndef SINGLETON_DEFINED_HPP
 #define SINGLETON_DEFINED_HPP
 
@@ -103,7 +100,7 @@ private:
     
     Singleton(const Singleton& src) = delete;
     Singleton& operator=(const Singleton& rhs) = delete;
-};                             className();                             className() { }
+};
 
 #define SINGLETON_DECLARE_NO_DEFAULT_CONSTRUCTOR(className) friend class Singleton<className>;
 
