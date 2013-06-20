@@ -45,7 +45,7 @@ class Singleton{
 public:
     virtual ~Singleton() { }
     
-    static T* GetInstance()
+    static T* getInstance()
     {
         if (!m_instance)
         {
@@ -58,7 +58,7 @@ public:
     }
     
     template<typename... Args>
-    static T* GetInstance(Args... args)
+    static T* getInstance(Args... args)
     {
         auto f = &Singleton<T>::template _DoInit<Args...>;
         std::call_once(m_onceFlag, f, args...);
