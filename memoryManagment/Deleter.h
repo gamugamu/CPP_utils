@@ -11,6 +11,17 @@
 
 #include <iostream>
 
+
+// supprime un pointer si il est non null, l'assigne ensuite à nul.
+template <typename type>
+void deleteIfNoNull(type pointer){
+    if(pointer){
+        delete pointer;
+        pointer = nullptr;
+    }
+}
+
+// smartpointer permettant de supprimer un pointer lors de sa suppression.
 template <typename T>
 class Deleter {
 public:
